@@ -3,8 +3,33 @@ package ru.geekbrains.lesson1.hw2;
 
 public class HomeWork2 {
 
-
-
+    static boolean checkBalance(int[] arr){
+        int sum = 0;
+        int leftSum = 0;
+        for (int i : arr){
+            sum += i;
+        }
+        if (sum % 2 != 0){
+            return false;
+        }
+        int pos = 0;
+        for (int i : arr) {
+            leftSum += i;
+            pos++;
+            if (2 * leftSum == sum) {
+                for (int j = 0; j < pos; j++) {
+                    System.out.print(arr[j] + " ");
+                }
+                System.out.println();
+                for (int j = pos; j < arr.length; j++) {
+                    System.out.print(arr[j] + " ");
+                }
+                System.out.println();
+                return true;
+            }
+        }
+        return false;
+    }
 
 
     public static void main(String[] args) {
@@ -68,7 +93,12 @@ public class HomeWork2 {
         }
         System.out.println();
         int minElement = array[0], maxElement = array[0];
-        for (int i = 0; i < array.length; i++) {
+        for (int i : array) {
+            minElement = Math.min(minElement,i);
+            maxElement = Math.max(maxElement,i);
+            
+        }
+        /*for (int i = 0; i < array.length; i++) {
             if (array[i] < minElement){
                 minElement = array[i];
             }
@@ -77,7 +107,9 @@ public class HomeWork2 {
             }
 
         }
+        */
         System.out.println(minElement + " " + maxElement);
+        
 
         //шестое задание
         /***
@@ -88,16 +120,12 @@ public class HomeWork2 {
          * checkBalance([1, 1, 1, || 2, 1]) → true, граница показана символами ||,
          * эти символы в массив не входят.
          */
+        checkBalance(new int[]{1,2,3,5,1,4,4,4});
 
 
 
-        static boolean checkBalance(int[] arr){
-            arr = new int[] {2, 2, 2, 1, 2, 2, 10, 1};
 
 
-        }
-
-            
 
 
     }
