@@ -1,6 +1,9 @@
 package hw5;
 
+
 public class Test {
+
+
 
     public static void main(String[] args) {
         Person[] persArray = new Person[5];

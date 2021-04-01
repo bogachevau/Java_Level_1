@@ -5,13 +5,15 @@ public class Dog extends Animal{
     public final int MAX_RUN_LENGTH = 500;
     public final int MAX_SWIM_LENGTH = 10;
     private String name;
+    public int dogCount;
 
     public Dog(String name){
         this.name = name;
-    }
-    public int dogCount;
-    public Dog(){
         dogCount++;
+    }
+
+    public Dog(){
+
     }
 
     public String getName() {
