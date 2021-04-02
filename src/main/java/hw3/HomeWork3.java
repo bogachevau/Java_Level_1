@@ -21,6 +21,7 @@ public class HomeWork3 {
                 int scannerNum = in.nextInt();
                 if (scannerNum == number) {
                     System.out.println("Поздравляем, Вы выиграли!");
+                    System.out.println("Загаданное число: " + number);
                     break;
                 } else if (scannerNum < number) {
                     System.out.println("Указанное число больше");
@@ -30,6 +31,7 @@ public class HomeWork3 {
                 ctn--;
                 if (ctn < 1){
                     System.out.println("Вы проиграли :(");
+                    System.out.println("Загаданное число: " + number);
                     break;
                 }
              }
