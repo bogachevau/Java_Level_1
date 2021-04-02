@@ -4,7 +4,7 @@ public class Cat extends Animal{
 
     private String name;
     private final int MAX_RUN_LENGTH = 200;
-    public int catCount = 0;
+    public static int catCount = 0;
 
     public String getName() {
 
@@ -12,6 +12,7 @@ public class Cat extends Animal{
     }
     public Cat(String name){
         this.name = name;
+//        animalCount++;
         catCount++;
     }
 

@@ -14,11 +14,11 @@ public class Test {
         Dog lobzik = new Dog("Лобзик");
         lobzik.run(250);
         lobzik.swim(10);
-        Animal animal = new Animal();
+//        Animal animal = new Animal();
         System.out.println("Создано:\n"
                 + " - Собак: " + lobzik.dogCount + "\n"
                 + " - Котов: " + antosik.catCount + "\n"
-                + " - Животных: " + animal.animalCount);
+                + " - Животных: " + lobzik.animalCount);
 
     }
 }
